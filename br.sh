@@ -1,6 +1,3 @@
-zmap -p53 --output-filter='sport=53' -Mudp --probe-args=file:dns.pkt -f "saddr,udp_pkt_size" -w br.zone -o dns.unfiltered -T11 -i vlan159
-cat dns.unfiltered | sed 's/,/ /g'| awk '$2 >= 3000' > BR_DNS
-
 zmap -p123 --output-filter='sport=123' -Mudp --probe-args=file:ntp.pkt -f "saddr,udp_pkt_size" -w br.zone -o ntp.unfiltered -T11 -i vlan159
 cat ntp.unfiltered | sed 's/,/ /g'| awk '$2 >= 400' > BR_NTP
 
