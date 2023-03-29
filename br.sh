@@ -13,7 +13,4 @@ cat wsd.unfiltered | sed 's/,/ /g'| awk '$2 >= 800' > BR_WSD
 zmap -p37810 --output-filter='sport=37810' -Mudp --probe-args=file:dvr.pkt -f "saddr,udp_pkt_size" -w br.zone -o dvr.unfiltered -T11 -i vlan159
 cat dvr.unfiltered | sed 's/,/ /g'| awk '$2 >= 600' > BR_DVR
 
-zmap -p37020 --output-filter='sport=37020' -Mudp --probe-args=file:sadp.pkt -f "saddr,udp_pkt_size" -w br.zone -o sadp.unfiltered -T11 -i vlan159
-cat sadp.unfiltered | sed 's/,/ /g'| awk '$2 >= 800' > BR_SADP
-
 echo "done!"
