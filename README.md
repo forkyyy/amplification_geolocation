@@ -6,12 +6,6 @@
 ## Overview
 This project collects methodological notes on reflector/amplifier analysis (e.g. NTP, SSDP, WSD) focused on **detection**, **classification**, and **mitigation**. It does not include exploitation tools or operational lists intended for abuse.
 
-## What you will find
-- Methodology for safely evaluating amplification in controlled labs.
-- Report templates and metrics for prioritizing reflectors (pps, bytes/response, latency).
-- Guidance for anonymizing and sharing artifacts (remove IPs / PII).
-- Defensive measures for network operators and ISPs.
-
 ## Sources and lab advice
 If you need IP blocklists for purely lab/testing purposes, use reputable public datasets and run tests only in controlled environments. Do not use data from this repository for operational attacks.
 
