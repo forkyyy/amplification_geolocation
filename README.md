@@ -1,4 +1,4 @@
-Do amplification attacks with specific geolocations
+Create your own list of BAD ips or research amplification attacks from specific countries.
 
 ```shell
 wget https://www.ipdeny.com/ipblocks/data/countries/br.zone
@@ -17,3 +17,4 @@ dos2unix kr.sh
 dos2unix cn.sh
 dos2unix th.sh
 ```
+For cyberdefense only.
