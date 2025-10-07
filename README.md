@@ -1,20 +1,28 @@
-Create your own list of BAD ips or research amplification attacks from specific countries.
+# Amplification Research — Defensive Artifacts & Guidance
 
-```shell
-wget https://www.ipdeny.com/ipblocks/data/countries/br.zone
-wget https://www.ipdeny.com/ipblocks/data/countries/cn.zone
-wget https://www.ipdeny.com/ipblocks/data/countries/kr.zone
-wget https://www.ipdeny.com/ipblocks/data/countries/th.zone
+> This repository has been sanitized. Payloads and offensive scripts were removed.
+> The current purpose is documentation, ethical research methodology and mitigation guidance.
 
-echo -ne "\x17\x00\x03\x2a\x00\x00\x00\x00" > ntp.pkt
-echo -ne "\x44\x48\x49\x50" > dvr.pkt
-echo -ne "<:>" > wsd.pkt
-echo -ne "\x00\x14\x00\x00" > ard.pkt
+## Overview
+This project collects methodological notes on reflector/amplifier analysis (e.g. NTP, SSDP, WSD) focused on **detection**, **classification**, and **mitigation**. It does not include exploitation tools or operational lists intended for abuse.
 
-apt install dos2unix -y
-dos2unix br.sh
-dos2unix kr.sh
-dos2unix cn.sh
-dos2unix th.sh
-```
-For cyberdefense only.
+## What you will find
+- Methodology for safely evaluating amplification in controlled labs.
+- Report templates and metrics for prioritizing reflectors (pps, bytes/response, latency).
+- Guidance for anonymizing and sharing artifacts (remove IPs / PII).
+- Defensive measures for network operators and ISPs.
+
+## Sources and lab advice
+If you need IP blocklists for purely lab/testing purposes, use reputable public datasets and run tests only in controlled environments. Do not use data from this repository for operational attacks.
+
+## Mitigation recommendations (summary)
+- Rate-limit suspicious UDP traffic at edge routers.
+- Detect reflectors by payload signatures and response patterns.
+- Coordinate with ISPs and CERTs to remediate exposed services.
+- Publish anonymized findings through responsible channels.
+
+## Responsible use
+Research on amplifiers must be performed under authorization or within isolated labs. Public disclosure of operational reflector lists is discouraged unless anonymized and coordinated with affected parties.
+
+## Contact
+For collaboration or to request anonymized data for research: forkcontato@gmail.com
